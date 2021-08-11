@@ -55,7 +55,7 @@ class IpsecExporter:
             it gets, it executes the 'check_ipsec' command.
             """
             for conn in connections:
-                ipsec_process = subprocess.run(["check_ipsec", conn],
+                ipsec_process = subprocess.run(["/usr/local/bin/check_ipsec", conn],
                                                stdout=subprocess.PIPE)
                 ipsec_process = float(ipsec_process.stdout)
                 gauge.labels(conn).set(ipsec_process)
