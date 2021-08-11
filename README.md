@@ -16,7 +16,13 @@ command.
 
 Docker installed:
 ```text
-yum install docker
+sudo yum install docker
+```
+
+Enable and Start the Docker Service
+```
+sudo systemctl enable docker
+sudo systemctl restart docker
 ```
 
 Python packages:
